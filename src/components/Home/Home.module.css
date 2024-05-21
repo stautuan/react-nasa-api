@@ -1,0 +1,70 @@
+.Home {
+  padding-top: 30rem;
+}
+
+.Home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+}
+
+.Home h1 {
+  font-family: 'Audiowide', sans-serif;
+  font-size: clamp(3rem, 1.2394rem + 4.6948vw, 8rem);
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  color: #fad390;
+  text-shadow: -6px 0 0 #e55039;
+  text-align: center;
+}
+
+h1 .top {
+  animation: moveInLeft 1.5s ease-out;
+}
+
+h1 .bottom {
+  animation: moveInRight 1.5s ease-out;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  80% {
+    transform: translateX(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  80% {
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}

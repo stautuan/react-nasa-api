@@ -1,0 +1,63 @@
+.Apod {
+  max-width: 73.5rem;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10rem 3rem;
+  text-shadow: 0 0 5px #c8c8c8;
+  opacity: 0.8;
+}
+
+.Apod::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+}
+
+.Apod h1 {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #adff2f;
+  margin-bottom: 5rem;
+  transform: translateX(-50%);
+}
+
+.date {
+  margin-bottom: 5rem;
+}
+
+h2 {
+  margin-bottom: 5rem;
+}
+
+.img,
+.video {
+  margin-bottom: 5rem;
+  /* border: 1px solid currentColor; */
+}
+
+.video {
+  height: 35rem;
+}
+
+.explanation {
+  text-align: justify;
+  line-height: 1.4;
+}
+
+section .error {
+  color: #842029;
+}
