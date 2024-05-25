@@ -12,7 +12,7 @@ function Photo({ photoData, caption, error }) {
             <figcaption>
               {caption.replace(/"/g, '')} Taken on Sol {photoData.sol} (
               {formatDate(photoData.earth_date)}) by my{' '}
-              {photoData.camera.full_name} 📸`
+              {photoData.camera.full_name} 📸
             </figcaption>
           </figure>
         )}
