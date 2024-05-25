@@ -25,7 +25,11 @@ function Apod() {
 
   return (
     <main className={styles.Apod}>
-      <h1 className="header__title">Astronomy Picture of the Day</h1>
+      <h1>
+        <span>Astronomy</span>
+        <span>Picture</span>
+        <span>of the Day</span>
+      </h1>
       <section>
         <p className={styles.error}>{error}</p>
         {/* Conditionally render on whether data has been fetched or not */}

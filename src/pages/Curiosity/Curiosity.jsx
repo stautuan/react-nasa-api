@@ -8,7 +8,7 @@ import Loader from '../../components/Loader/Loader';
 const apiKey = import.meta.env.VITE_NASA_KEY;
 
 function Curiosity() {
-  const [date, setDate] = useState('2024-02-19');
+  const [date, setDate] = useState('');
   const [photoData, setPhotoData] = useState(null);
   const [caption, setCaption] = useState('');
   const [loadingPhoto, setLoadingPhoto] = useState(false);

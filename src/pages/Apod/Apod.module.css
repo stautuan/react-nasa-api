@@ -1,13 +1,17 @@
 .Apod {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   max-width: 73.5rem;
   margin: 0 auto;
   text-align: center;
-  padding: 10rem 3rem;
+  padding: 3rem 3rem;
   text-shadow: 0 0 5px #c8c8c8;
-  opacity: 0.8;
 }
 
-.Apod::before {
+.Apod::after {
   content: '';
   position: fixed;
   top: 0;
@@ -25,28 +29,39 @@
 }
 
 .Apod h1 {
-  position: absolute;
-  top: 24px;
-  left: 50%;
-  font-size: 1.6rem;
+  position: sticky;
+  top: 50px;
+  font: 10rem 'Jersey 25', monospace;
+  color: #d87093;
   font-weight: 400;
-  color: #adff2f;
-  margin-bottom: 5rem;
-  transform: translateX(-50%);
+  letter-spacing: 3px;
+  height: 100vh;
+  margin-bottom: 40rem;
+  opacity: 0.7;
+
+  animation: textflicker 0.01s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
-.date {
-  margin-bottom: 5rem;
+@keyframes textflicker {
+  from {
+    text-shadow: 1px 0 0 #ea36af, -2px 0 0 #75fa69;
+  }
+  to {
+    text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
+  }
 }
 
-h2 {
-  margin-bottom: 5rem;
+section {
+  margin-top: -20rem;
 }
 
+h2,
+.date,
 .img,
 .video {
   margin-bottom: 5rem;
-  /* border: 1px solid currentColor; */
 }
 
 .video {

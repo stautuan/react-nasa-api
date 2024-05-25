@@ -30,11 +30,11 @@
 }
 
 h1 .top {
-  animation: moveInLeft 1.5s ease-out;
+  animation: moveInLeft 3s ease-out;
 }
 
 h1 .bottom {
-  animation: moveInRight 1.5s ease-out;
+  animation: moveInRight 3s ease-out;
 }
 
 @keyframes moveInLeft {
