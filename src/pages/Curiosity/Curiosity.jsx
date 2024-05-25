@@ -47,7 +47,7 @@ function Curiosity() {
           setPhotoData(photo);
           setLoadingPhoto(false);
 
-          // Feed the fetched image to generate caption
+          // Send a request to the server in order to generate a caption
           const captionResponse = await fetch(
             'http://localhost:3000/generate-captions',
             {
@@ -55,16 +55,19 @@ function Curiosity() {
               headers: {
                 'Content-Type': 'application/json',
               },
-              body: JSON.stringify({ image: data.photos[0].img_src }),
+              body: JSON.stringify({ image: photo.img_src }),
             }
           );
 
           const captionData = await captionResponse.json();
-          setCaption(captionData);
+          setCaption(captionData.caption);
           setLoadingCaption(false);
         }
       } catch (error) {
-        setError(error);
+        setError(
+          'Sorry, no photos available for this date. Just hanging out and charging my batteries. Thank you for checking out my page 🥰'
+        );
+        console.error(error);
         setLoadingPhoto(false);
         setLoadingCaption(false);
       }

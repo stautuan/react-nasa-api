@@ -37,7 +37,7 @@ app.post('/generate-captions', async (req, res) => {
     });
 
     const caption = response.choices[0].message.content;
-    res.send(caption);
+    res.send({ caption });
   } catch (error) {
     console.error(error);
   }
