@@ -1,7 +1,7 @@
 import styles from './Photo.module.css';
 import { formatDate } from '../../utils/helpers';
 
-function Photo({ photoData, error }) {
+function Photo({ photoData, caption, error }) {
   return (
     <main className={styles.PhotoCard}>
       <span className={styles.error}>{error}</span>
@@ -10,9 +10,9 @@ function Photo({ photoData, error }) {
           <figure className={styles.Photo}>
             <img src={photoData.img_src} alt="photo of Mars surface" />
             <figcaption>
-              Captured this stunning landscape on my daily drive on Sol{' '}
-              {photoData.sol} ({formatDate(photoData.earth_date)}). Taken by my{' '}
-              {photoData.camera.full_name} 📸
+              {caption.replace(/"/g, '')} Taken on Sol {photoData.sol} (
+              {formatDate(photoData.earth_date)}) by my{' '}
+              {photoData.camera.full_name} 📸`
             </figcaption>
           </figure>
         )}
