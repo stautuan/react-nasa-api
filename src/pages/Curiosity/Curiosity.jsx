@@ -3,19 +3,26 @@ import styles from './Curiosity.module.css';
 import Header from './Header';
 import Date from './Date';
 import Photo from './Photo';
+import Loader from '../../components/Loader/Loader';
 
 const apiKey = import.meta.env.VITE_NASA_KEY;
 
 function Curiosity() {
-  const [date, setDate] = useState('2024-02-19');
+  const [date, setDate] = useState('');
   const [photoData, setPhotoData] = useState(null);
-  const [error, setError] = useState(null);
   const [caption, setCaption] = useState('');
+  const [loadingPhoto, setLoadingPhoto] = useState(false);
+  const [loadingCaption, setLoadingCaption] = useState(false);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     if (!date) return;
 
     async function getPhoto() {
+      // Fetching process has started
+      setLoadingPhoto(true);
+      setLoadingCaption(true);
+
       try {
         setPhotoData(null);
         setError(null);
@@ -33,9 +40,12 @@ function Curiosity() {
           setError(
             'Sorry, no photos available for this date. Just hanging out and charging my batteries. Thank you for checking out my page 🥰'
           );
+          setLoadingPhoto(false);
+          setLoadingCaption(false);
         } else {
           const photo = data.photos[0];
           setPhotoData(photo);
+          setLoadingPhoto(false);
 
           // Feed the fetched image to generate caption
           const captionResponse = await fetch(
@@ -50,26 +60,31 @@ function Curiosity() {
           );
 
           const captionData = await captionResponse.json();
-          console.log(captionData);
           setCaption(captionData);
+          setLoadingCaption(false);
         }
-
-        console.log(response, data);
       } catch (error) {
-        setError(
-          'Sorry, no photos available for this date. Just hanging out and charging my batteries. Thank you for checking out my page 🥰'
-        );
+        setError(error);
+        setLoadingPhoto(false);
+        setLoadingCaption(false);
       }
     }
 
     getPhoto();
   }, [date]);
 
+  // If both are false, loading animation will stop rendering
+  const isLoading = loadingPhoto || loadingCaption;
+
   return (
     <div className={styles.Curiosity}>
       <Header />
       <Date date={date} onSetDate={setDate} />
-      <Photo photoData={photoData} caption={caption} error={error} />
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <Photo photoData={photoData} caption={caption} error={error} />
+      )}
     </div>
   );
 }

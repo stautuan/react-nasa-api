@@ -6,7 +6,7 @@ function Photo({ photoData, caption, error }) {
     <main className={styles.PhotoCard}>
       <span className={styles.error}>{error}</span>
       <article>
-        {photoData && (
+        {photoData && caption && (
           <figure className={styles.Photo}>
             <img src={photoData.img_src} alt="photo of Mars surface" />
             <figcaption>
