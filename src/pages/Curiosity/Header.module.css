@@ -1,7 +1,6 @@
 .Header {
-  text-align: center;
   padding-top: 5rem;
-
+  text-align: center;
   animation: textflicker 0.01s;
   animation-iteration-count: infinite;
   animation-direction: alternate;

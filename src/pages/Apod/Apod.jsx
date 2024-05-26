@@ -26,8 +26,7 @@ function Apod() {
   return (
     <main className={styles.Apod}>
       <h1>
-        <span>Astronomy</span>
-        <span>Picture</span>
+        <span>Astronomy Picture</span>
         <span>of the Day</span>
       </h1>
       <section>
