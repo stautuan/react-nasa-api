@@ -49,7 +49,7 @@ function Curiosity() {
 
           // Send a request to the server in order to generate a caption
           const captionResponse = await fetch(
-            'https://your-vercel-backend.vercel.app/generate-captions',
+            'http://localhost:3000/generate-captions',
             {
               method: 'POST',
               headers: {
