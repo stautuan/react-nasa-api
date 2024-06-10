@@ -4,21 +4,23 @@ import styles from './PageNav.module.css';
 function PageNav() {
   return (
     <nav className={styles.PageNav}>
-      <Link to="/">Home</Link>
+      <Link className={styles.link} to="/">
+        Home
+      </Link>
 
       <ul>
         <li>
-          <NavLink to="/apod" className="link">
+          <NavLink className={styles.link} to="/apod">
             Space
           </NavLink>
         </li>
         <li>
-          <NavLink to="/curiosity" className="link">
+          <NavLink className={styles.link} to="/curiosity">
             Mars
           </NavLink>
         </li>
         <li>
-          <NavLink to="/about" className="link">
+          <NavLink className={styles.link} to="/about">
             About
           </NavLink>
         </li>

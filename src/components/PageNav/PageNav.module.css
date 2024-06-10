@@ -12,5 +12,14 @@
 
 .PageNav ul {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
+}
+
+.link {
+  transition: color 0.4s ease-out;
+}
+
+.link:hover {
+  color: yellowgreen;
+  font-weight: 600;
 }
