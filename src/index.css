@@ -60,3 +60,9 @@ ul {
   background: #0080ff;
   text-shadow: none;
 }
+
+@media screen and (max-width: 400px) {
+  body {
+    font-size: 1.4rem;
+  }
+}

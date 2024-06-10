@@ -31,7 +31,8 @@
 }
 
 .Apod h1 {
-  font: 7rem 'Jersey 25', monospace;
+  font-size: clamp(4rem, 2.9437rem + 2.8169vw, 7rem);
+  font-family: 'Jersey 25', monospace;
   color: #d87093;
   font-weight: 100;
   letter-spacing: 3px;
@@ -68,4 +69,14 @@ h2,
 
 section .error {
   color: #842029;
+}
+
+@media screen and (max-width: 400px) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  .explanation {
+    text-align: left;
+  }
 }

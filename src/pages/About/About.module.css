@@ -25,3 +25,9 @@
   );
   pointer-events: none;
 }
+
+@media screen and (max-width: 400px) {
+  .About {
+    width: 90%;
+  }
+}

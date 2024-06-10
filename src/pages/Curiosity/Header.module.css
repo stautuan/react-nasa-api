@@ -16,7 +16,8 @@
 }
 
 .Header h2 {
-  font: 7rem 'Jersey 25', monospace;
+  font-size: clamp(4rem, 2.9437rem + 2.8169vw, 7rem);
+  font-family: 'Jersey 25', monospace;
   color: #d87093;
   font-weight: 100;
   letter-spacing: 3px;

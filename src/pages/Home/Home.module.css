@@ -1,5 +1,5 @@
 .Home {
-  padding-top: 30rem;
+  padding-top: clamp(20rem, 16.4789rem + 9.3897vw, 30rem);
 }
 
 .Home::before {
@@ -21,7 +21,7 @@
 
 .Home h1 {
   font-family: 'Audiowide', sans-serif;
-  font-size: clamp(3rem, 1.2394rem + 4.6948vw, 8rem);
+  font-size: clamp(2.4rem, 0.4282rem + 5.2582vw, 8rem);
   letter-spacing: 1rem;
   text-transform: uppercase;
   color: #fad390;
@@ -66,5 +66,11 @@ h1 .bottom {
   100% {
     opacity: 1;
     transform: translate(0);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .Home h1 {
+    text-shadow: -3px 0 0 #e55039;
   }
 }
