@@ -1,8 +1,16 @@
-# React + Vite
+# Space Exploration
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About
 
-Currently, two official plugins are available:
+A website that explores the cosmos using NASA's API to fetch stunning astronomy and Curiosity photos while incorporating OpenAI to generate captions.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Built with
+
+```
+- React
+- CSS Modules
+- Axios
+- NASA APOD API
+- NASA Mars Rover Photos API
+- Openai API
+```
