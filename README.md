@@ -1,7 +1,5 @@
 # Space Exploration
 
-## About
-
 A website that explores the cosmos using NASA's API to fetch stunning astronomy and Curiosity photos while incorporating OpenAI to generate captions.
 
 ### Built with
