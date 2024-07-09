@@ -20,7 +20,7 @@ A website that explores the cosmos using NASA's API to fetch stunning astronomy 
 A live demo of the Space Exploration site is available at [LINK TO LIVE DEMO](https://nasa-space-api.vercel.app/)
 
 ## Credits
-- This website was created by [stautua](https://github.com/stautuan).
+- This website was created by [stautuan](https://github.com/stautuan).
 - The site uses the [NASA APIs](https://api.nasa.gov/) for the images and [OpenAI API](https://platform.openai.com/docs/overview) to generate fun captions. 
 
 Explore the universe one picture at a time!
